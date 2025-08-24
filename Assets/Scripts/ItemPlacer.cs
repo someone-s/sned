@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Anchor : MonoBehaviour
+public class ItemPlacer : MonoBehaviour
 {
+    [SerializeField] private InputActionReference actionReference;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
