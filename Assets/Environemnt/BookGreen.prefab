@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6843081146141754144}
   - component: {fileID: 4487869754222793982}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,8 @@ GameObject:
   - component: {fileID: 9206370172337605681}
   - component: {fileID: 8818809928605200666}
   - component: {fileID: 5693010379775430828}
-  m_Layer: 0
+  - component: {fileID: 6189574107146533496}
+  m_Layer: 3
   m_Name: BookGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +158,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 756794351
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1958573545, guid: 71eb4d10bf3c8fd958c3158bbceb1167, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -180,8 +181,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 1.9523658
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -268,3 +269,15 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6189574107146533496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860280704188772776}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1828525da18501c3aa509e3ea370c99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

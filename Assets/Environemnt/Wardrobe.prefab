@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1182059241974107561}
   - component: {fileID: 4974169370423492052}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,8 @@ GameObject:
   - component: {fileID: 3593285590615160231}
   - component: {fileID: 3449487102791266179}
   - component: {fileID: 8649756331284142544}
-  m_Layer: 0
+  - component: {fileID: 4243677935608408578}
+  m_Layer: 3
   m_Name: Wardrobe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 756794351
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1569311, guid: 71eb4d10bf3c8fd958c3158bbceb1167, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -184,8 +185,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 11.443123
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -272,6 +273,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4243677935608408578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844779391415947966}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1828525da18501c3aa509e3ea370c99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1980553729903634976
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1112858790984794282}
   - component: {fileID: 6984159569734186039}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3235638961716799574}
   - component: {fileID: 7252293192311046573}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4252848400421716875}
   - component: {fileID: 8154016205705047204}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8773507083861825225}
   - component: {fileID: 9150460642283020839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -8,6 +8,7 @@ public class ItemSpawner : MonoBehaviour
 {
     [SerializeField] private Transform[] slots;
     [SerializeField] private Transform spawn;
+    [SerializeField] private Transform parent;
     private LinkedList<GameObject> items = new();
 
     [SerializeField] private SpawnSpec[] spawnSpecs;
@@ -46,8 +47,7 @@ public class ItemSpawner : MonoBehaviour
             combine += spawnSpecs[i].frequency;
             if (combine >= random)
             {
-                GameObject item = Instantiate(spawnSpecs[i].prefab);
-                Transform slot = slots[slots.Length - 1];
+                GameObject item = Instantiate(spawnSpecs[i].prefab, parent);
                 item.GetComponent<SmoothMove>().Position = spawn.localPosition;
                 item.GetComponent<SmoothScale>().Scale = spawn.localScale;
                 items.AddLast(item);
@@ -56,11 +56,11 @@ public class ItemSpawner : MonoBehaviour
         }
     }
 
-    [Button]
-    public GameObject Take()
-    {
-        GameObject output = items.First();
+    public GameObject First => items.First();
 
+    [Button]
+    public void Shift()
+    {
         items.RemoveFirst();
 
         Spawn();
@@ -72,7 +72,5 @@ public class ItemSpawner : MonoBehaviour
             item.GetComponent<SmoothScale>().TargetScale = slots[i].localScale;
             i++;
         }
-
-        return output;
     }
 }
