@@ -5,6 +5,7 @@ public class VerticalMove : MonoBehaviour
 {
     public float speed;
 
+    [SerializeField] private SmoothMove smoothMove;
     [SerializeField] private SpawnSpec[] spawnSpecs;
 
     [Serializable]
@@ -16,14 +17,13 @@ public class VerticalMove : MonoBehaviour
         public float elapsedHeight;
     }
 
-    private void Update()
+    public void Move(float y)
     {
-        float move = speed * Time.deltaTime;
+        smoothMove.TargetPosition += new Vector3(0f, y, 0f);
 
-        transform.position += new Vector3(0f, move, 0f);
         for (int i = 0; i < spawnSpecs.Length; i++)
         {
-            spawnSpecs[i].elapsedHeight+= move;
+            spawnSpecs[i].elapsedHeight += y;
             if (spawnSpecs[i].elapsedHeight > spawnSpecs[i].prefabHeight)
             {
                 spawnSpecs[i].elapsedHeight -= spawnSpecs[i].prefabHeight;

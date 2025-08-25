@@ -1,75 +1,138 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NUnit.Framework;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class ItemSpawner : MonoBehaviour
+public class ItemSpawner : SerializedMonoBehaviour
 {
-    [SerializeField] private Transform[] slots;
-    [SerializeField] private Transform spawn;
-    [SerializeField] private Transform parent;
-    private LinkedList<GameObject> items = new();
+    [SerializeField] private Transform[] queueSlots;
+    [SerializeField] private Transform spawnSlot;
+    [SerializeField] private Transform slotParent;
+    private LinkedList<GameObject> queueItems = new();
 
-    [SerializeField] private SpawnSpec[] spawnSpecs;
-    private float totalFrequency;
+    [SerializeField] private Dictionary<AccesorySpawnType, AccesorySpawnGroup> accesorySpawnGroups;
 
     [Serializable]
-    private class SpawnSpec
+    private class AccesorySpawnGroup
     {
-        public GameObject prefab;
-        [Min(0f)]
-        public float frequency;
+        public AccesorySpawnSpec[] specs;
+        public float allowed;
     }
 
-    private void Awake()
+    private enum AccesorySpawnType
     {
-        totalFrequency = spawnSpecs.Sum(spec => spec.frequency);
+        Large,
+        Medium,
+        Small
+    }
+
+    [Serializable]
+    private class AccesorySpawnSpec
+    {
+        public GameObject prefab;
+        public float weight;
+    }
+
+    [SerializeField] private StorageSpawnSpec[] storageSpawnSpecs;
+
+    [Serializable]
+    private class StorageSpawnSpec
+    {
+        public GameObject prefab;
+        public float weight;
+        public AccesorySpawnType[] contributions;
     }
 
     private void Start()
     {
-        for (int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < queueSlots.Length; i++)
         {
             Spawn();
-            GameObject item = items.Last();
-            item.GetComponent<SmoothMove>().Position = slots[i].localPosition;
-            item.GetComponent<SmoothScale>().Scale = slots[i].localScale;
+            GameObject item = queueItems.Last();
+            item.GetComponent<SmoothMove>().Position = queueSlots[i].localPosition;
+            item.GetComponent<SmoothScale>().Scale = queueSlots[i].localScale;
         }
     }
 
     private void Spawn()
     {
-        float random = UnityEngine.Random.Range(0f, totalFrequency);
-        float combine = 0f;
-        for (int i = 0; i < spawnSpecs.Length; i++)
+        if (accesorySpawnGroups.Sum(group => group.Value.allowed) <= 0)
         {
-            combine += spawnSpecs[i].frequency;
+            SpawnStorage();
+        }
+        else
+        {
+            SpawnAccesory();
+        }
+    }
+
+    private void SpawnStorage()
+    {
+        float random = UnityEngine.Random.Range(0f, storageSpawnSpecs.Sum(spec => spec.weight));
+        float combine = 0f;
+        for (int i = 0; i < storageSpawnSpecs.Length; i++)
+        {
+            combine += storageSpawnSpecs[i].weight;
             if (combine >= random)
             {
-                GameObject item = Instantiate(spawnSpecs[i].prefab, parent);
-                item.GetComponent<SmoothMove>().Position = spawn.localPosition;
-                item.GetComponent<SmoothScale>().Scale = spawn.localScale;
-                items.AddLast(item);
+                GameObject item = Instantiate(storageSpawnSpecs[i].prefab, slotParent);
+                item.GetComponent<SmoothMove>().Position = spawnSlot.localPosition;
+                item.GetComponent<SmoothScale>().Scale = spawnSlot.localScale;
+                queueItems.AddLast(item);
+                foreach (AccesorySpawnType contribution in storageSpawnSpecs[i].contributions)
+                    accesorySpawnGroups[contribution].allowed++;
                 break;
             }
         }
     }
 
-    public GameObject First => items.First();
+    private void SpawnAccesory()
+    {
+        float random = UnityEngine.Random.Range(0f, accesorySpawnGroups.Sum(group => group.Value.allowed));
+        float combine = 0f;
+        foreach (KeyValuePair<AccesorySpawnType, AccesorySpawnGroup> pair in accesorySpawnGroups)
+        {
+            combine += pair.Value.allowed;
+            if (combine >= random)
+            {
+                float random2 = UnityEngine.Random.Range(0f, pair.Value.specs.Sum(spec => spec.weight));
+                float combine2 = 0f;
+                for (int i = 0; i < pair.Value.specs.Length; i++)
+                {
+                    combine2 += pair.Value.specs[i].weight;
+                    if (combine2 >= random2)
+                    {
+                        GameObject item = Instantiate(pair.Value.specs[i].prefab, slotParent);
+                        item.GetComponent<SmoothMove>().Position = spawnSlot.localPosition;
+                        item.GetComponent<SmoothScale>().Scale = spawnSlot.localScale;
+                        queueItems.AddLast(item);
+                        pair.Value.allowed--;
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+    }
+
+    public GameObject First => queueItems.First();
 
     [Button]
     public void Shift()
     {
-        items.RemoveFirst();
+        Debug.Log(queueItems.Count);
+        queueItems.RemoveFirst();
 
         Spawn();
+        Debug.Log(queueItems.Count);
 
         int i = 0;
-        foreach (GameObject item in items)
+        foreach (GameObject item in queueItems)
         {
-            item.GetComponent<SmoothMove>().TargetPosition = slots[i].localPosition;
-            item.GetComponent<SmoothScale>().TargetScale = slots[i].localScale;
+            item.GetComponent<SmoothMove>().TargetPosition = queueSlots[i].localPosition;
+            item.GetComponent<SmoothScale>().TargetScale = queueSlots[i].localScale;
             i++;
         }
     }

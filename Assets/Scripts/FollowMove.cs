@@ -12,6 +12,6 @@ public class FollowMove : MonoBehaviour
 
     private void Update()
     {
-        smoothMove.TargetPosition = (Vector2)Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
+        smoothMove.TargetPosition = (Vector2)Camera.main.ScreenToWorldPoint(Pointer.current.position.value);
     }
 }

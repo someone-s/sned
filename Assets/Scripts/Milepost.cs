@@ -15,7 +15,7 @@ public class Milepost : MonoBehaviour
         if (enabled == false) return;
         enabled = false;
 
-        SpeedControl.Instance.SetProgress(transform.position.y);
+        ProgressControl.Instance.SetProgress(transform.position.y);
         GetComponent<Collider2D>().enabled = false;
     }
 }

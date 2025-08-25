@@ -29,6 +29,7 @@ public class ItemPlacer : MonoBehaviour
         target.GetComponent<FollowMove>().enabled = false;
         target.GetComponent<SmoothMove>().enabled = false;
         target.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID("Middleground");
-        target.GetComponent<Rigidbody2D>().simulated = true;
+        if (target.TryGetComponent(out Rigidbody2D rigidbody2D))
+            rigidbody2D.simulated = true;
     }
 }
