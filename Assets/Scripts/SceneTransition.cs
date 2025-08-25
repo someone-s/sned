@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameLoader : MonoBehaviour
+public class SceneTransition : MonoBehaviour
 {
     [SerializeField] private Button button;
     [SerializeField] private int index;
