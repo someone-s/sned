@@ -775,7 +775,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -784,6 +784,50 @@ TextureImporter:
       bones: []
       spriteID: 424ca15c73c45865d8fa2c9f7734455c
       internalID: -1192642187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 58
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fc61202c33c05ab928655c52affd77
+      internalID: -575965010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rect
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 52
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee47421b8839efcfab96b42b8a03fcfc
+      internalID: -389630684
       vertices: []
       indices: 
       edges: []
@@ -810,10 +854,12 @@ TextureImporter:
       Diagonal2x2: 452809686
       Flower: -1708516345
       Ladder: 757795986
+      Logo: -575965010
       MainWallGreen: 5546671543968653177
       Piramid: 8755591262435691780
       PlantWide: -1539740977
       QueuePanel: -1802430749
+      Rect: -389630684
       Round: -773099570
       Shark: 1650624282
       Shelve1x1: 955863740

@@ -6,6 +6,7 @@ public class ItemPlacer : MonoBehaviour
 {
     [SerializeField] private PointerEvent pointerEvent;
     [SerializeField] private ItemSpawner itemSpawner;
+    [SerializeField] private CountdownTimer countdownTimer;
 
     private void Awake()
     {
@@ -31,5 +32,7 @@ public class ItemPlacer : MonoBehaviour
         target.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID("Middleground");
         if (target.TryGetComponent(out Rigidbody2D rigidbody2D))
             rigidbody2D.simulated = true;
+
+        countdownTimer.Reset();
     }
 }
