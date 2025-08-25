@@ -122,11 +122,9 @@ public class ItemSpawner : SerializedMonoBehaviour
     [Button]
     public void Shift()
     {
-        Debug.Log(queueItems.Count);
         queueItems.RemoveFirst();
 
         Spawn();
-        Debug.Log(queueItems.Count);
 
         int i = 0;
         foreach (GameObject item in queueItems)

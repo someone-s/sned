@@ -374,20 +374,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 3.3940277
-      outSlope: 3.3940277
+      inSlope: 19.32994
+      outSlope: 19.32994
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.12403494
+      outWeight: 0.10999992
     - serializedVersion: 3
       time: 10
-      value: 100
-      inSlope: 16.677853
-      outSlope: 16.677853
+      value: 300
+      inSlope: 45.49245
+      outSlope: 45.49245
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.08201685
+      inWeight: 0.068945885
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1828525da18501c3aa509e3ea370c99b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 3}
 --- !u!1 &8964194536751752847
 GameObject:
   m_ObjectHideFlags: 0

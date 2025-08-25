@@ -5,6 +5,8 @@ public class FollowMove : MonoBehaviour
 {
     private SmoothMove smoothMove;
 
+    [SerializeField] private Vector2 offset;
+
     private void Awake()
     {
         smoothMove = GetComponent<SmoothMove>();
@@ -12,6 +14,6 @@ public class FollowMove : MonoBehaviour
 
     private void Update()
     {
-        smoothMove.TargetPosition = (Vector2)Camera.main.ScreenToWorldPoint(Pointer.current.position.value);
+        smoothMove.TargetPosition = (Vector2)Camera.main.ScreenToWorldPoint(Pointer.current.position.value) + offset;
     }
 }

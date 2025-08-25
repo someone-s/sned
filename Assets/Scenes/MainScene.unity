@@ -928,7 +928,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalMove: {fileID: 506211753}
-  sizeCamera: {fileID: 506211751}
   progress: 10
 --- !u!114 &506211755
 MonoBehaviour:
@@ -1339,7 +1338,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.25364774, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1349,7 +1348,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.507295, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &914300622
 Transform:
@@ -1396,273 +1395,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
+    SerializedFormat: 0
+    SerializedBytes: 010113000000610063006300650073006f007200790053007000610077006e00470072006f007500700073002f000000000195000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e00440069006300740069006f006e00610072007900600032005b005b004900740065006d0053007000610077006e00650072002b00410063006300650073006f007200790053007000610077006e0054007900700065002c00200041007300730065006d0062006c0079002d004300530068006100720070005d002c005b004900740065006d0053007000610077006e00650072002b00410063006300650073006f007200790053007000610077006e00470072006f00750070002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c00690062000000000001010800000063006f006d00700061007200650072002f01000000016d000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e0045006e0075006d0045007100750061006c0069007400790043006f006d0070006100720065007200600031005b005b004900740065006d0053007000610077006e00650072002b00410063006300650073006f007200790053007000610077006e0054007900700065002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c0069006200010000000600000000000000000705060300000000000000042e1d010200000024006b000000000000000000010102000000240076002f02000000012f0000004900740065006d0053007000610077006e00650072002b00410063006300650073006f007200790053007000610077006e00470072006f00750070002c00200041007300730065006d0062006c0079002d0043005300680061007200700002000000010105000000730070006500630073002f0300000001300000004900740065006d0053007000610077006e00650072002b00410063006300650073006f007200790053007000610077006e0053007000650063005b005d002c00200041007300730065006d0062006c0079002d0043005300680061007200700003000000060400000000000000022f04000000012e0000004900740065006d0053007000610077006e00650072002b00410063006300650073006f007200790053007000610077006e0053007000650063002c00200041007300730065006d0062006c0079002d00430053006800610072007000040000000b0106000000700072006500660061006200000000001f01060000007700650069006700680074000000803f05023004000000050000000b0106000000700072006500660061006200010000001f01060000007700650069006700680074000000803f05023004000000060000000b0106000000700072006500660061006200020000001f01060000007700650069006700680074000000803f05023004000000070000000b0106000000700072006500660061006200030000001f01060000007700650069006700680074000000803f0507051f010700000061006c006c006f00770065006400000000000505042e1d010200000024006b00010000000000000001010200000024007600300200000008000000010105000000730070006500630073003003000000090000000606000000000000000230040000000a0000000b0106000000700072006500660061006200040000001f01060000007700650069006700680074000000803f050230040000000b0000000b0106000000700072006500660061006200050000001f01060000007700650069006700680074000000803f050230040000000c0000000b0106000000700072006500660061006200060000001f01060000007700650069006700680074000000803f050230040000000d0000000b0106000000700072006500660061006200070000001f01060000007700650069006700680074000000803f050230040000000e0000000b0106000000700072006500660061006200080000001f01060000007700650069006700680074000000803f050230040000000f0000000b0106000000700072006500660061006200090000001f01060000007700650069006700680074000000803f0507051f010700000061006c006c006f00770065006400000000000505042e1d010200000024006b0002000000000000000101020000002400760030020000001000000001010500000073007000650063007300300300000011000000060400000000000000023004000000120000000b01060000007000720065006600610062000a0000001f01060000007700650069006700680074000000803f05023004000000130000000b01060000007000720065006600610062000b0000001f01060000007700650069006700680074000000803f05023004000000140000000b01060000007000720065006600610062000c0000001f01060000007700650069006700680074000000803f05023004000000150000000b01060000007000720065006600610062000d0000001f01060000007700650069006700680074000000803f0507051f010700000061006c006c006f007700650064000000000005050705
     ReferencedUnityObjects:
     - {fileID: 8538699064336848969, guid: aaa3be2c2165a4024a70e426e8581ed8, type: 3}
     - {fileID: 8538699064336848969, guid: 64bc43d43c6103537bef569c555fc30f, type: 3}
     - {fileID: 8538699064336848969, guid: e458c54ec2d4e9ab188e9891f3c885c4, type: 3}
+    - {fileID: 8538699064336848969, guid: 0ad051b019377caec913dcadf2ad4a7a, type: 3}
     - {fileID: 8538699064336848969, guid: 2e74db720105cf56ea55749edf8d6412, type: 3}
     - {fileID: 8538699064336848969, guid: 701caf026a95c59038d7846f025a7365, type: 3}
     - {fileID: 8538699064336848969, guid: b194a2139797f459da6b711d895ae817, type: 3}
     - {fileID: 8538699064336848969, guid: 76848e5bec922d2a4bdee79d934589cc, type: 3}
     - {fileID: 8538699064336848969, guid: d4e7ea8b995fd1a079cccb980ad0b7fa, type: 3}
+    - {fileID: 8538699064336848969, guid: 65042f7a3c168755582c662464930718, type: 3}
     - {fileID: 2860280704188772776, guid: 3a1378383057ec46abdcdc0dc190ad4d, type: 3}
     - {fileID: 2860280704188772776, guid: 364cd8d905ad7b75a8b8d61590b25d8f, type: 3}
     - {fileID: 2860280704188772776, guid: 5150cd7e3bcf3f1cdae29456eaf5a8ee, type: 3}
+    - {fileID: 2860280704188772776, guid: 15103d99f0483456888d396e99cbc2b2, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: accesorySpawnGroups
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[ItemSpawner+AccesorySpawnType,
-        Assembly-CSharp],[ItemSpawner+AccesorySpawnGroup, Assembly-CSharp]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[ItemSpawner+AccesorySpawnType,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 7
-      Data: 2|ItemSpawner+AccesorySpawnGroup, Assembly-CSharp
-    - Name: specs
-      Entry: 7
-      Data: 3|ItemSpawner+AccesorySpawnSpec[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 4|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 0
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 5|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 1
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 6|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 2
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: allowed
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 7
-      Data: 7|ItemSpawner+AccesorySpawnGroup, Assembly-CSharp
-    - Name: specs
-      Entry: 7
-      Data: 8|ItemSpawner+AccesorySpawnSpec[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 5
-    - Name: 
-      Entry: 7
-      Data: 9|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 3
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 4
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 11|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 5
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 12|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 6
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 13|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 7
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: allowed
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 7
-      Data: 14|ItemSpawner+AccesorySpawnGroup, Assembly-CSharp
-    - Name: specs
-      Entry: 7
-      Data: 15|ItemSpawner+AccesorySpawnSpec[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 16|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 8
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 17|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 9
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 18|ItemSpawner+AccesorySpawnSpec, Assembly-CSharp
-    - Name: prefab
-      Entry: 10
-      Data: 10
-    - Name: weight
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: allowed
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   queueSlots:
   - {fileID: 725104277}
   - {fileID: 106297503}
@@ -1680,6 +1434,9 @@ MonoBehaviour:
   - prefab: {fileID: 844779391415947966, guid: f6fbe43c97255c9cfabd286543b1bc04, type: 3}
     weight: 1
     contributions: 020000000100000001000000
+  - prefab: {fileID: 844779391415947966, guid: 0e5047c639d560e8c982b07758f44239, type: 3}
+    weight: 0.5
+    contributions: 
 --- !u!4 &984242319
 Transform:
   m_ObjectHideFlags: 0
