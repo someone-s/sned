@@ -841,7 +841,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -863,7 +863,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -885,7 +885,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -894,6 +894,28 @@ TextureImporter:
       bones: []
       spriteID: dd071b8f351ae679daf82920c071e9de
       internalID: -1755755633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Globe
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 20
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefd4020d190083018c294d2aa3f1b56
+      internalID: 552389020
       vertices: []
       indices: 
       edges: []
@@ -920,6 +942,7 @@ TextureImporter:
       Diagonal2x2: 452809686
       Flower: -1708516345
       Gear: -1755755633
+      Globe: 552389020
       Home: 786769087
       Ladder: 757795986
       Logo: -575965010
