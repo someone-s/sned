@@ -7,6 +7,6 @@ public class Miletext : MonoBehaviour
 
     private void Start()
     {
-        GetComponentInChildren<TMP_Text>().text = ((transform.position.y + itemHeight * 0.5f) / itemHeight * 0.5f).ToString("0.0");
+        GetComponentInChildren<TMP_Text>(includeInactive: true).text = ((transform.position.y + itemHeight * 0.5f) / itemHeight * 0.5f).ToString("0.0");
     }
 }
