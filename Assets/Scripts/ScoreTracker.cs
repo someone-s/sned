@@ -34,6 +34,9 @@ public class ScoreTracker : MonoBehaviour
 
     public void ComputeResult()
     {
+        CountdownTimer.Instance.Hide();
+        HintDetect.Instance.Block();
+
         inputToDisable.SetActive(false);
         
         scoreTextArea.text = Mathf.CeilToInt(height * itemCount).ToString();

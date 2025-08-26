@@ -907,7 +907,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -916,6 +916,28 @@ TextureImporter:
       bones: []
       spriteID: eefd4020d190083018c294d2aa3f1b56
       internalID: 552389020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TouchHint
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b3c8a0e81632bd5a5afae5d144e61e
+      internalID: 19970753
       vertices: []
       indices: 
       edges: []
@@ -964,6 +986,7 @@ TextureImporter:
       StorageBox: 1429844545
       TapeHousing: 1794184358
       TapeSegment: 979461174
+      TouchHint: 19970753
       Upload: 435279162
       WallMount: -1192642187
       Wardrobe: 1569311

@@ -4,6 +4,12 @@ using UnityEngine.Events;
 
 public class CountdownTimer : MonoBehaviour
 {
+    public static CountdownTimer Instance { get; private set; }
+    private CountdownTimer()
+    {
+        Instance = this;
+    }
+
     public float duration;
 
     private float remaining;
@@ -15,6 +21,12 @@ public class CountdownTimer : MonoBehaviour
     {
         remaining = duration;
         enabled = true;
+    }
+
+    public void Hide()
+    {
+        textArea.gameObject.SetActive(false);
+        enabled = false;
     }
 
     private void Update()

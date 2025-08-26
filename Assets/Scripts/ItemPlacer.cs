@@ -37,5 +37,6 @@ public class ItemPlacer : MonoBehaviour
 
         SoundPlayer.Instance.PlayEffect(0);
         ScoreTracker.Instance.IncrementItemCounter();
+        HintDetect.Instance.Reset();
     }
 }
