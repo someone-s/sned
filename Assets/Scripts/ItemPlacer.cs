@@ -8,8 +8,6 @@ public class ItemPlacer : MonoBehaviour
     [SerializeField] private ItemSpawner itemSpawner;
     [SerializeField] private CountdownTimer countdownTimer;
 
-    [SerializeField] private AudioSource audioSource;
-
     private void Awake()
     {
         pointerEvent.onPointerDown.AddListener(Attach);
@@ -37,6 +35,7 @@ public class ItemPlacer : MonoBehaviour
 
         countdownTimer.Reset();
 
-        audioSource.Play();
+        SoundPlayer.Instance.PlayEffect(0);
+        ScoreTracker.Instance.IncrementItemCounter();
     }
 }

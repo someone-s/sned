@@ -18,5 +18,8 @@ public class ProgressControl : MonoBehaviour
         enabled = true;
         verticalMove.Move(newProgress - progress);
         progress = newProgress;
+
+        SoundPlayer.Instance.PlayEffect(1);
+        ScoreTracker.Instance.SetHeight(progress);
     }
 }

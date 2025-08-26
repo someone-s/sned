@@ -9,7 +9,6 @@ public class CountdownTimer : MonoBehaviour
     private float remaining;
 
     [SerializeField] private TMP_Text textArea; 
-    public UnityEvent OnTimeout;
 
     private void Start() => Reset();
     public void Reset()
@@ -24,8 +23,8 @@ public class CountdownTimer : MonoBehaviour
         if (remaining <= 0f)
         {
             remaining = 0f;
-            OnTimeout.Invoke();
             enabled = false;
+            ScoreTracker.Instance.OnCountdownTimeout();
         }
         textArea.text = remaining.ToString("0.0");
     }
