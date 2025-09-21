@@ -8,7 +8,7 @@ Home Screen                           |	Game Screen	                          | 
 ## Where can I play it
 PC/Mobile Browser (ITCH.IO)                             |	Android (Play Store)
 -------------------------------------------------------:|:-------------------------------------------------------
-[Sned page for itch.io](https://someone-s.itch.io/sned) |	Close beta inprogress, stay tuned
+[Sned page for itch.io](https://someone-s.itch.io/sned) |	[<img  alt="Sned page on Google Play"  src="/Readme/GetItOnGooglePlay_Badge_Web_color_English.png" />](https://play.google.com/store/apps/details?id=com.eden.sned)
 
 ## Extra fluff
 Made this in 3 days, turned out pretty well, no ads, and don't see a point adding ads to a showcase project. Made all the assets including soundtrack in this project except the bleeps and bloops.
